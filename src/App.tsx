@@ -244,64 +244,108 @@ function Testimonials() {
 
 function CTA() {
   return (
-    <section id="cta" className="py-section-gap px-4 md:px-margin-desktop bg-background border-t border-outline-variant">
-      <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-3 gap-gutter">
-        {/* Community Card */}
-        <div className="group relative p-8 border-2 border-blue-600 hover:border-blue-400 bg-blue-900/10 transition-all flex flex-col justify-between items-start gap-8 hover:-translate-y-2 duration-300 overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff_10px,#ffffff_12px)]"></div>
-          <div className="relative z-10">
-            <h2 className="font-headline-md text-headline-md uppercase mb-4 text-primary">
+    <div id="cta" className="border-t border-outline-variant flex flex-col">
+      {/* SKOOL COMMUNITY SECTION */}
+      <section className="relative py-section-gap px-4 md:px-margin-desktop bg-blue-900/10 border-b border-outline-variant overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff_10px,#ffffff_12px)]"></div>
+        <div className="relative z-10 max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="flex flex-col items-start gap-8">
+            <h2 className="font-headline-lg text-headline-lg uppercase text-primary">
               SKOOL COMMUNITY
             </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant max-w-[400px]">
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[500px]">
               The SIMPLE 4-day plan to get you lean (no matter your starting point or age)
             </p>
+            <a
+              href="#"
+              className="mt-4 bg-primary text-on-primary font-label-bold text-label-bold px-10 py-4 flex items-center justify-center gap-2 hover:bg-on-surface-variant transition-colors active:scale-95"
+            >
+              JOIN OUR SKOOL COMMUNITY <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
-          <a
-            href="#"
-            className="relative z-10 w-full lg:w-auto bg-primary text-on-primary font-label-bold text-label-bold px-10 py-4 flex items-center justify-center gap-2 hover:bg-on-surface-variant transition-colors active:scale-95"
-          >
-            JOIN OUR SKOOL COMMUNITY <ArrowRight className="w-5 h-5" />
-          </a>
-        </div>
-        {/* Newsletter Card */}
-        <div className="group relative p-8 border-2 border-white/80 hover:border-white bg-white/5 transition-all flex flex-col justify-between items-start gap-8 hover:-translate-y-2 duration-300 overflow-hidden">
-          <div className="absolute inset-0 opacity-10 pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#2563eb_10px,#2563eb_12px)]"></div>
-          <div className="relative z-10">
-            <h2 className="font-headline-md text-headline-md uppercase mb-4 text-primary">
-              NEWSLETTER
-            </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant max-w-[400px]">
-              Want 30 days of FREE meal plans, workouts, and strategies sent to you, check out my newsletter👇
-            </p>
+          <div className="w-full">
+            {/* Visual Placeholders for Skool */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="aspect-square bg-background border border-outline-variant flex flex-col items-center justify-center p-6 text-center shadow-lg transform -rotate-2">
+                <div className="w-16 h-16 rounded-full bg-surface-container-high mb-4"></div>
+                <div className="h-4 w-2/3 bg-surface-container-high mb-2"></div>
+                <div className="h-3 w-1/2 bg-surface-container-high"></div>
+                <p className="mt-8 font-label-bold text-xs text-on-surface-variant uppercase tracking-widest">Community Feed</p>
+              </div>
+              <div className="aspect-square bg-background border border-outline-variant flex flex-col items-center justify-center p-6 text-center shadow-lg transform translate-y-8 rotate-2">
+                <div className="w-full aspect-video bg-surface-container-high mb-4"></div>
+                <div className="h-4 w-full bg-surface-container-high mb-2"></div>
+                <div className="h-3 w-3/4 bg-surface-container-high"></div>
+                <p className="mt-8 font-label-bold text-xs text-on-surface-variant uppercase tracking-widest">Course Modules</p>
+              </div>
+            </div>
           </div>
-          <a
-            href="#"
-            className="relative z-10 w-full lg:w-auto border border-primary text-primary font-label-bold text-label-bold px-10 py-4 flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all active:scale-95"
-          >
-            SUBSCRIBE TO NEWSLETTER <Mail className="w-5 h-5" />
-          </a>
         </div>
-        {/* 1-on-1 Coaching Card */}
-        <div className="group relative p-8 border-2 border-blue-600 hover:border-blue-400 bg-blue-900/10 transition-all flex flex-col justify-between items-start gap-8 hover:-translate-y-2 duration-300 overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff_10px,#ffffff_12px)]"></div>
-          <div className="relative z-10">
-            <h2 className="font-headline-md text-headline-md uppercase mb-4 text-primary">
+      </section>
+
+      {/* NEWSLETTER SECTION */}
+      <section className="relative py-section-gap px-4 md:px-margin-desktop bg-white/5 border-b border-outline-variant overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#2563eb_10px,#2563eb_12px)]"></div>
+        <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center gap-8">
+          <Mail className="w-16 h-16 text-primary hidden md:block opacity-80" />
+          <h2 className="font-headline-lg text-headline-lg uppercase text-primary">
+            NEWSLETTER
+          </h2>
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[600px]">
+            Want 30 days of FREE meal plans, workouts, and strategies sent to you? Check out my newsletter 👇
+          </p>
+          <form className="w-full mt-4 flex flex-col sm:flex-row gap-0 border border-outline-variant shadow-lg" onSubmit={(e) => e.preventDefault()}>
+            <input 
+              type="email" 
+              placeholder="ENTER YOUR EMAIL" 
+              className="flex-1 bg-background px-6 py-5 text-primary placeholder-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors font-body-md"
+              required
+            />
+            <button 
+              type="submit"
+              className="bg-primary text-on-primary border-l border-outline-variant font-label-bold text-label-bold px-10 py-5 flex items-center justify-center gap-2 hover:bg-on-surface-variant transition-colors"
+            >
+              SUBSCRIBE <Mail className="w-5 h-5" />
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* 1-ON-1 COACHING SECTION */}
+      <section className="relative py-section-gap px-4 md:px-margin-desktop bg-blue-900/10 overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffffff_10px,#ffffff_12px)]"></div>
+        <div className="relative z-10 max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1 w-full">
+            {/* Calendly Placeholder */}
+            <div className="w-full aspect-[4/3] max-h-[600px] bg-background border border-outline-variant flex flex-col items-center justify-center p-8 text-center shadow-lg relative overflow-hidden group">
+               <div className="absolute top-0 w-full h-2 bg-blue-600"></div>
+               <Zap className="w-16 h-16 mb-6 opacity-30 group-hover:opacity-100 transition-opacity text-blue-500" />
+               <p className="font-headline-md mb-2 text-primary">CALENDLY WIDGET</p>
+               <p className="font-body-md text-on-surface-variant opacity-70 mb-8 max-w-sm">
+                 Drop your Calendly embed script here. Clients will be able to book directly from this view without leaving the site.
+               </p>
+               <div className="border border-dashed border-outline-variant py-4 px-8 font-label-bold text-xs text-on-surface-variant opacity-70 bg-surface-container-lowest w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                 &lt;!-- Calendly inline widget begin --&gt;<br/>
+                 &lt;div class="calendly-inline-widget"&gt;&lt;/div&gt;<br/>
+                 &lt;!-- Calendly inline widget end --&gt;
+               </div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2 flex flex-col items-start gap-8 lg:pl-12">
+            <h2 className="font-headline-lg text-headline-lg uppercase text-primary">
               1-ON-1 COACHING
             </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant max-w-[400px]">
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[500px]">
               Want to work with me 1 on 1 to build a personalized plan (book your call)
             </p>
+            <p className="font-body-md text-primary/70 border-l-2 border-blue-500 pl-4 py-2 mt-4 max-w-[400px]">
+              Connect your calendar to start accepting strategy sessions and diagnostic calls securely.
+            </p>
           </div>
-          <a
-            href="#"
-            className="relative z-10 w-full lg:w-auto border border-primary text-primary font-label-bold text-label-bold px-10 py-4 flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary transition-all active:scale-95"
-          >
-            APPLY FOR COACHING <ArrowRight className="w-5 h-5" />
-          </a>
         </div>
-      </div>
-    </section>
+      </section>
+
+    </div>
   );
 }
 

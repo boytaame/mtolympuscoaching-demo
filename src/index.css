@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;700&family=Geist:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface-container-lowest: #0e0e0f;
+  --color-surface-container-low: #1c1b1c;
+  --color-on-surface-variant: #c4c7c8;
+  --color-secondary: #bac8da;
+  --color-surface: #131314;
+  --color-background: #131314;
+  --color-primary: #ffffff;
+  --color-on-background: #e5e2e3;
+  --color-surface-container-highest: #353436;
+  --color-secondary-container: #3d4a5a;
+  --color-surface-variant: #353436;
+  --color-on-primary: #2f3131;
+  --color-surface-container-high: #2a2a2b;
+  --color-outline-variant: #444748;
+  --color-outline: #8e9192;
+  --color-on-surface: #e5e2e3;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-headline-xl: 72px;
+  --text-headline-xl--line-height: 72px;
+  --text-headline-xl--letter-spacing: 0.02em;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-lg: 48px;
+  --text-headline-lg--line-height: 48px;
+  --text-label-bold: 14px;
+  --text-label-bold--line-height: 20px;
+  --text-label-bold--letter-spacing: 0.1em;
+
+  --font-body-md: "JetBrains Mono", monospace;
+  --font-label-sm: "Geist", sans-serif;
+  --font-headline-xl: "Anton", sans-serif;
+  --font-body-lg: "JetBrains Mono", monospace;
+  --font-headline-md: "Anton", sans-serif;
+  --font-headline-lg: "Anton", sans-serif;
+  --font-label-bold: "Geist", sans-serif;
+
+  --spacing-unit: 8px;
+  --spacing-section-gap: 120px;
+  --spacing-margin-mobile: 16px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-desktop: 64px;
+  --spacing-gutter: 24px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface selection:bg-primary selection:text-on-primary font-body-md antialiased;
+  }
+}
+
+@layer utilities {
+  .hard-shadow {
+    box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.1);
+  }
+
+  .video-overlay-gradient {
+    background: linear-gradient(0deg, rgba(19,19,20,1) 0%, rgba(19,19,20,0) 50%, rgba(19,19,20,1) 100%);
+  }
+}
+
+/* Custom scrollbar for brutalist aesthetic */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-surface-container-lowest, #0e0e0f); }
+::-webkit-scrollbar-thumb { background: var(--color-outline-variant, #444748); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-primary, #ffffff); }
+
